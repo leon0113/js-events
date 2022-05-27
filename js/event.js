@@ -1,8 +1,9 @@
+// 1
 function makeBlue() {
     document.body.style.backgroundColor = 'blue';
     document.body.style.color = 'white';
 }
-
+//1
 const pinkButton = document.getElementById('make-pink-button');
 pinkButton.onclick = makepink;
 
@@ -33,3 +34,10 @@ makeSlateBlue.addEventListener('click', function () {
     document.body.style.backgroundColor = 'SlateBlue';
     document.body.style.color = 'white';
 });
+
+
+// Using more shortCut
+document.getElementById('make-LawnGreen').addEventListener('click', function () {
+    document.body.style.backgroundColor = 'LawnGreen';
+    document.body.style.color = 'Green';
+})
