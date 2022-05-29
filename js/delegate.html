@@ -19,6 +19,7 @@
         <li class="item">A, dolores quaerat?</li>
     </ul>
     <button id="add-item">Add Items</button>
+    <h1 id="mouseMove">Mouse moving event</h1>
     <script>
         // deleting item on clicking the item
         /*  const items = document.getElementsByClassName('item');
@@ -42,6 +43,18 @@
         // removing items in bubbles way
         document.getElementById('item-container').addEventListener('click', function (event) {
             event.target.parentNode.removeChild(event.target);
+        })
+
+
+        // mouse moving event
+        document.getElementById('mouseMove').addEventListener('mousemove', function () {
+            console.log('Heyyyyy');
+            // document.body.style.backgroundColor = 'red';
+        })
+        // mouse enter event
+        document.getElementById('mouseMove').addEventListener('mouseenter', function () {
+            console.log('Heyyyyy. mouse on me');
+            // document.body.style.backgroundColor = 'red';
         })
     </script>
 </body>
