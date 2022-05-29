@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubble</title>
+</head>
+
+<body>
+    <h2>Event Bubble</h2>
+    <section id="section-container">
+        <h4>Bubble list</h4>
+        <ul id="list-container">
+            <li class="item">Lorem, ipsum dolor.</li>
+            <li id="second-item" class="item">Quod, reprehenderit totam.</li>
+            <li class="item">Atque, numquam doloribus.</li>
+            <li class="item">Ullam, eum iure!</li>
+            <li class="item">Magnam, porro laborum?</li>
+            <li class="item">Aliquid, eum sapiente.</li>
+        </ul>
+    </section>
+
+    <script>
+        document.getElementById('second-item').addEventListener('click', function (event) {
+            console.log('clcked');
+            //if we dont want event buddle to spread onto itsp parents tag
+            event.stopPropagation()
+
+
+        })
+        document.getElementById('second-item').addEventListener('click', function (event) {
+            console.log('clcked2');
+            // if we want event buddle to take this and previous click
+            event.stopImmediatePropagation();
+        })
+        document.getElementById('second-item').addEventListener('click', function (event) {
+            console.log('clcked3');
+
+
+        })
+        document.getElementById('second-item').addEventListener('click', function (event) {
+            console.log('clcked4');
+
+
+        })
+
+        // adding click event on ul tag
+        document.getElementById('list-container').addEventListener('click', function () {
+            console.log('ul clcked');
+        })
+
+        // adding click event on section tag
+        document.getElementById('section-container').addEventListener('click', function () {
+            console.log('section clcked');
+        })
+    </script>
+</body>
+
+</html>

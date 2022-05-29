@@ -22,7 +22,7 @@
         })
         // focus
         document.getElementById('delete-confirm').addEventListener('focus', function () {
-            document.body.style.backgroundColor = 'red';
+            document.body.style.backgroundColor = 'yellow';
         })
         // blur
         document.getElementById('delete-confirm').addEventListener('blur', function () {
@@ -48,7 +48,7 @@
                 deleteBtn.setAttribute('disabled', true);
             }
         })
-        //  CHANGE
+        //  CHANGE event :--- if we copy paste value in input field, change event catches the value!
         document.getElementById('delete-confirm').addEventListener('change', function () {
             const deleteField = document.getElementById('delete-confirm');
             console.log(deleteField.value);
